@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Product = ({product}) => {
     const {img,name,desc,price,avaqnt,minqnt,_id}=product;
-    console.log(product)
+    // console.log(product)
     return (
         <div>
             <div class="card lg:max-w-lg bg-base-100 shadow-xl mb-4">

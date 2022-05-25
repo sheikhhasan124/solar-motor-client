@@ -16,7 +16,7 @@ const Review = () => {
       <div className="grid lg:grid-cols-3 gap-5">
         {reviews.map((rev) =>  {
           const {name, review, img, rating, address } = rev;
-          console.log(rev)
+          // console.log(rev)
          return (
             <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <div className="card-body">
