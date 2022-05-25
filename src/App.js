@@ -6,7 +6,7 @@ import Navber from './pages/Shared/Navber';
 
 function App() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto px-12">
       <Navber/>
      <Routes>
        <Route path="/" element={<Home/>}></Route>

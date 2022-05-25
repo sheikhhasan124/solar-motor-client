@@ -1,0 +1,53 @@
+[
+    {
+        "name":"Ac Inductor",
+        "img":"https://i.ibb.co/N1zDghH/ac-inductor.jpg",
+        "desc":"An Inductor is usually a coil of wire that sets up an alternating magnetic field around it when an alternating current flows through it . Inductance is the property of an inductor that opposes the change in current",
+        "min-o-qnt":10,
+        "ava-qnt":100,
+        "price":2000
+    },
+    {
+        "name":"Charge Port",
+        "img":"https://i.ibb.co/t23DGSj/charge-port.jpg",
+        "desc":"For most electric car, it only takes about an hour to charge from 40% to 80% on a 220V system, but another two hours to go from 80% to 100%.  the charge port on all Tesla vehicles is located within the tail light on the driver's side.",
+        "min-o-qnt":1000,
+        "ava-qnt":7000,
+        "price":200
+    },
+    {
+        "name":"Dc converter",
+        "img":"https://i.ibb.co/NZZQK9X/dc-converter.jpg",
+        "desc":"Tesla knows how much power the DC-DC converter is producing. And because every circuit in the car is protected by an eFuse, the car knows exactly how much power is being used.",
+        "min-o-qnt":50,
+        "ava-qnt":1000,
+        "price":2000
+    },
+    {
+        "name":"Ev Motor",
+        "img":"https://i.ibb.co/ct72mm5/ev-motor.jpg",
+        "desc":"Tesla, for example, uses alternating current (AC) induction motors in the Model S but uses permanent-magnet direct current (DC) motors in its Model 3. There are upsides to both types of motor, but generally, induction motors are somewhat less efficient than permanent-magnet motors at full load",
+        "min-o-qnt":10,
+        "ava-qnt":1000,
+        "price":1000
+    },
+    {
+        "name":"Battery Pack",
+        "img":"https://i.ibb.co/XVKBPF1/Tesla-battery.jpg",
+        "desc":"Tesla's third battery option is the 4680 cell it raved about a few years ago at its Battery Day event. The Model Y crossovers coming out of Tesla's new Gigafactory in Austin will be fitted with 4680 Tabless battery cells. The vehicles will also be the first from Tesla to feature its structural battery pack",
+        "min-o-qnt":10,
+        "ava-qnt":2000,
+        "price":2000
+    },
+    {
+        "name":"Wheel",
+        "img":"https://i.ibb.co/bBm5HrG/wheel.jpg",
+        "desc":"The tires that are used with these wheels are Continental Contisportcontact 5P – 245/35ZR21 96Y XL (Overall Diameter: 27.8″) and Michelin Pilot Sport PS2 – 245/35ZR21 96Y XL (Overall Diameter: 27.8″) for the front wheels.",
+        "min-o-qnt":100,
+        "ava-qnt":5000,
+        "price":100
+    }
+]
+
+
+

@@ -1,4 +1,6 @@
 import React from 'react';
+import SubbannerOne from '../../asset/subbannerone.jpg'
+import SubbannerTwo from '../../asset/subbannertwo.jpg'
 
 const Subbanner = () => {
     const cares= [
@@ -31,6 +33,10 @@ const Subbanner = () => {
                 <h2 className='text-[20px] font-bold'>{care.care}</h2>
                 <p className='text-gray-400'><small>{care.desc}</small></p>
             </div>)}
+           </div>
+           <div className='grid md:grid-cols-2 my-8'>
+               <div><img src={SubbannerOne} alt="" /></div>
+               <div><img src={SubbannerTwo} alt="" /></div>
            </div>
         </div>
     );
