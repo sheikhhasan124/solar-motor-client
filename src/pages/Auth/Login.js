@@ -21,7 +21,7 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
       if(user || gUser){
-        navigate('/')
+        navigate(from, { replace: true });
       }
       /* const [token]= useToken(user || gUser)
       useEffect( ()=>{
