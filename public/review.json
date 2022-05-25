@@ -1,0 +1,27 @@
+[
+    {
+       "name":"Winson Herry",
+        "review":"Electric vehicles (EVs) offer an opportunity to replace fossil fuels in the transport sector. Electrification of the transport sector can also bring benefits in terms of increased energy efficiency and reduced local pollution.",
+        "address":"California",
+        "rating" : 4,
+         "img" : "https://i.ibb.co/84mnB3j/people1.png"
+    },
+    {
+        "name":"Winson Herry",
+        "review":"Through their entire lifetime, electric cars are better for the climate. In the manufacturing process, electric vehicles will produce more global warming emissions than the average gasoline vehicle, because electric cars' large lithium-ion batteries require a lot of materials and energy to build.",
+        "address":"California",
+        "rating" : 4,
+         "img" : "https://i.ibb.co/ZHJh0HG/people3.png"
+    },
+    {
+        "name":"Winson Herry",
+        "review":"Electric Cars Cost Less Money To Maintain .Instead, the battery of the electric car does all the work and because of this the car is cheaper to maintain. The cost per mile to power an electric car is also generally cheaper than a similar petrol-powered equivalent  meaning you can travel further for less money.",
+        "address":"California",
+        "rating" : 4,
+         "img" : "https://i.ibb.co/Nttrht1/people2.png"
+    }
+]
+
+
+
+

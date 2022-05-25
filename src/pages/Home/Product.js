@@ -1,13 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Product = ({product}) => {
-    const {img,name,desc,price,avaqnt,minqnt}=product;
+    const {img,name,desc,price,avaqnt,minqnt,_id}=product;
     console.log(product)
     return (
         <div>
             <div class="card lg:max-w-lg bg-base-100 shadow-xl mb-4">
   <figure class="px-10 pt-10">
-    <img src={img} alt="Shoes" class="rounded-xl h-[200px]" />
+    <img src={img} alt="Shoes" class="rounded-xl h-[200px] min-w-[300px]" />
   </figure>
   <div class="card-body items-center text-center">
    <div className='flex'>
@@ -20,7 +21,7 @@ const Product = ({product}) => {
     <p className='text-gray-500 font-semibold'>Price Per Unit: <span className='text-rose-500'>${price}</span><span className='text-gray-400 ml-4 line-through'>${price+100}</span></p>
     <hr className='text-gray-500 w-40 h-3'/>
     <div className=' grid grid-cols-2 gap-20 items-center'>
-      <div><button class="btn btn-sm block flex-1">Place Order</button></div>
+      <div><button class="btn btn-sm block flex-1"><Link to={`/purchase/${_id}`}>Purchase</Link></button></div>
       <div><p className='text-rose-500 font-semibold'>Min Order : {minqnt}</p></div>
     </div>
   </div>

@@ -1,12 +1,14 @@
 import React from 'react';
 import SubbannerOne from '../../asset/subbannerone.jpg'
 import SubbannerTwo from '../../asset/subbannertwo.jpg'
+import { HiFlag } from "react-icons/hi";
+
 
 const Subbanner = () => {
     const cares= [
         {
             id:1,
-            
+            p: <HiFlag/>,
             care:'Free Shipping',
             desc:'Free worldwide shipping on all area on order above $200'
         },
@@ -30,6 +32,7 @@ const Subbanner = () => {
         <div className='my-12'>
            <div className='grid lg:grid-cols-4 md:grid-cols-2 flex justify-center'>
            {cares.map(care=><div className='my-4 '>
+                 <p>{care.p}</p>
                 <h2 className='text-[20px] font-bold'>{care.care}</h2>
                 <p className='text-gray-400'><small>{care.desc}</small></p>
             </div>)}
