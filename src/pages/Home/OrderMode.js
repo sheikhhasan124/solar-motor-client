@@ -1,52 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import auth from '../../firebase_init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import {toast } from 'react-toastify';
 
-const OrderMode = ({order,orderNum}) => {
+const OrderMode = ({order,orderNum,setOrder}) => {
     
-    const {name,price}=order;
+    const {name,price,_id}=order;
     const [user, loading, error] = useAuthState(auth);
     const [orderprice,setPrice] = useState(orderNum*price)
-
 
     useEffect(()=>{
        setPrice(orderNum*price)
     },[orderNum])
 
     const handleBooking=(event)=>{
-        // event.preventDefault()
-        // const slot = event.target.slt.value;
+        event.preventDefault()
 
-        // const booking = {
+        const order = {
+          productId: _id,
+          productName:name,
+          totalOrder:orderNum,
+          totalPrice:orderprice,
+          email:user.email,
+          userName:user.displayName,
+          phone: event.target.phone.value
+        }
+        fetch('http://localhost:5000/myOrder',{
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(order)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+          console.log(data)
+          if(data.success){
+             toast(`order is set, name is ${name}`)
+           }
+           else{
+             toast.error(`already have an order `)
+           }
           
-        //   treatment:name,
-    
-        //   slot,
-        //   price,
-        //   patient:user.email,
-        //   patientName:user.displayName,
-        //   phone: event.target.phone.value
-        // }
-        // fetch('http://localhost:5001/booking',{
-        //   method: 'POST',
-        //   headers: {
-        //     'content-type': 'application/json'
-        //   },
-        //   body: JSON.stringify(booking)
-        // })
-        // .then(res=>res.json())
-        // .then(data=>{
-        //   console.log(data)
-        //   if(data.success){
-        //      toast(`appoinment is set, ${formattedDate} at ${slot}`)
-        //    }
-        //    else{
-        //      toast.error(`already have an appoinment on ${data.booking.date} at ${data.booking.slot}`)
-        //    }
-          
-        //   //to close the modal
-        //    setTreatment(null)
-        // })
+          //to close the modal
+           setOrder(null)
+        })
     }
 
     return (

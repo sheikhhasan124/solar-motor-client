@@ -33,7 +33,7 @@ const Purchase = () => {
      <div>
      {item&& <PurchaseItem setOrderNum={setOrderNum} orderNum={orderNum} setOrder={setOrder} item={item}/>}
      </div>
-     {order && <OrderMode orderNum={orderNum} order={order}/>}
+     {order && <OrderMode orderNum={orderNum} order={order} setOrder={setOrder}/>}
    </div>
   );
 };

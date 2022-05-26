@@ -8,6 +8,11 @@ import Home from './pages/Home/Home';
 import Purchase from './pages/Home/Purchase';
 import Footer from './pages/Shared/Footer';
 import Navber from './pages/Shared/Navber';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Dashboard from './pages/Dashboard/Dashboard';
+import MyItems from './pages/Dashboard/MyItems';
+import Payments from './pages/Dashboard/Payments';
 
 function App() {
   return (
@@ -18,8 +23,13 @@ function App() {
        <Route path="/product/:id" element={<RequireAuth><Purchase/></RequireAuth>}></Route>
        <Route path="/login" element={<Login/>}></Route>
        <Route path="/register" element={<Registration/>}></Route>
+       <Route path="/dashboard" element={<Dashboard/>}>
+         <Route index element={<MyItems/>}></Route>
+         <Route path="payment/:id" element={<Payments/>}></Route>
+       </Route>
      </Routes>
      <Footer/>
+     <ToastContainer/>
     </div>
   );
 }
