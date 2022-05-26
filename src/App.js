@@ -15,7 +15,7 @@ function App() {
       <Navber/>
      <Routes>
        <Route path="/" element={<Home/>}></Route>
-       <Route path="/purchase/:id" element={<RequireAuth><Purchase/></RequireAuth>}></Route>
+       <Route path="/product/:id" element={<RequireAuth><Purchase/></RequireAuth>}></Route>
        <Route path="/login" element={<Login/>}></Route>
        <Route path="/register" element={<Registration/>}></Route>
      </Routes>

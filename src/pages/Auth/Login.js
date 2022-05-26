@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 import { useForm } from 'react-hook-form';
 import Loading from '../Shared/Loading';
 import {Link, useLocation, useNavigate} from 'react-router-dom'
 import auth from '../../firebase_init';
-import useToken from '../../Hook/useToken';
+;
 
 
 
@@ -24,12 +24,15 @@ const Login = () => {
       if(user || gUser){
         navigate(from, { replace: true });
       }
-      const [token]= useToken(user || gUser)
+     /*  const [token]= useToken(user || gUser)
       useEffect( ()=>{
         if(token){
           navigate(from, { replace: true });
         }
-      },[token,from,navigate])
+      },[token,from,navigate]) */
+      if(user || gUser){
+        navigate(from, { replace: true });
+      }
       if(loading||gLoading){
           return <Loading/>
       }
