@@ -15,7 +15,7 @@ const Review = () => {
       <h2 className="text-center font-bold text-2xl"> CUSTOMER REVIEWS {reviews.length}</h2>
       <div className="grid lg:grid-cols-3 gap-5">
         {reviews.map((rev) =>  {
-          const {name, review, img, rating, address } = rev;
+          const {userName, review, img, rating, address } = rev;
           // console.log(rev)
          return (
             <div className="card lg:max-w-lg bg-base-100 shadow-xl">
@@ -29,7 +29,7 @@ const Review = () => {
               </div>
               <div>
                 <p>{address}</p>
-                <p>{name}</p>
+                <p>{userName}</p>
                 <p>Rating{rating}</p>
               </div>
             </div>

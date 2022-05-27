@@ -17,6 +17,8 @@ import NotFound from './pages/Shared/NotFound';
 import User from './pages/Dashboard/User';
 import RequireAdmin from './pages/Dashboard/RequirAdmin';
 import Blog from './pages/Blog/Blog';
+import Review from './pages/Dashboard/Review';
+import Myprofile from './pages/Dashboard/Myprofile';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
        <Route path="/register" element={<Registration/>}></Route>
        <Route path="/dashboard" element={<Dashboard/>}>
          <Route index element={<MyItems/>}></Route>
+         <Route path='review' element={<Review/>}></Route>
+         <Route path='myprofile' element={<Myprofile/>}></Route>
          <Route path="user" element={<RequireAdmin><User/></RequireAdmin>}></Route>
          <Route path="payment/:id" element={<Payments/>}></Route>
        </Route>
