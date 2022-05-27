@@ -16,6 +16,7 @@ import Payments from './pages/Dashboard/Payments';
 import NotFound from './pages/Shared/NotFound';
 import User from './pages/Dashboard/User';
 import RequireAdmin from './pages/Dashboard/RequirAdmin';
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
        <Route path="/" element={<Home/>}></Route>
        <Route path="/product/:id" element={<RequireAuth><Purchase/></RequireAuth>}></Route>
        <Route path="/login" element={<Login/>}></Route>
+       <Route path="/blog" element={<Blog/>}></Route>
        <Route path="/register" element={<Registration/>}></Route>
        <Route path="/dashboard" element={<Dashboard/>}>
          <Route index element={<MyItems/>}></Route>
