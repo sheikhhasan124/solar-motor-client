@@ -22,6 +22,7 @@ import Myprofile from './pages/Dashboard/Myprofile';
 import AddProduct from './pages/Dashboard/AddProduct';
 import ManageOrder from './pages/Dashboard/ManageOrder';
 import ManageProduct from './pages/Dashboard/ManageProduct';
+import MyPortfolio from './pages/PortFolio/MyPortfolio';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
        <Route path="/login" element={<Login/>}></Route>
        <Route path="/blog" element={<Blog/>}></Route>
        <Route path="/register" element={<Registration/>}></Route>
+       <Route path='/portfolio' element={<MyPortfolio/>}></Route>
        <Route path="/dashboard" element={<Dashboard/>}>
          <Route index element={<MyItems/>}></Route>
          <Route path='review' element={<Review/>}></Route>

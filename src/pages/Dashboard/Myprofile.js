@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase_init';
+import UpdateMyprofileModal from './UpdateMyprofileModal';
 
 const Myprofile = () => {
     const [user]=useAuthState(auth)
     const [myinf,setMyinf]=useState({})
+    const [updateProfile,setUpdateProfile]=useState(null)
    const email = user?.email
     useEffect(()=>{
          fetch(`http://localhost:5000/userinf/${email}`)
@@ -13,7 +15,7 @@ const Myprofile = () => {
          .then(data=>setMyinf(data))
     },[])
     
-    //  console.log(user)
+     console.log(updateProfile)
 
 
 
@@ -47,20 +49,23 @@ const Myprofile = () => {
 
 
     return (
-        <div>
+        <div className=''>
             <h1>my profile</h1>
 
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card lg:max-w-lg bg-base-100 shadow-xl">
   <div class="card-body">
       <p class="py-6  font-bold">Name : {user.displayName}</p>
       <h1>Email : {user.email}</h1>
       <p class=" ">Education : {myinf.education}</p>
       <p>Location : {myinf.location}</p>
       <p>Link : {myinf.link}</p>
+      <label onClick={()=>setUpdateProfile(myinf)} for="profile-updateModal" class="btn ">update</label>
+     
   </div>
 </div>
 
-{myinf.location? ' ':<div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+<div>
+{myinf.location? ' ':<div class="card  max-w-sm shadow-2xl bg-base-100">
      <form onSubmit={handleinfo}>
      <div class="card-body">
         <div class="form-control">
@@ -78,9 +83,8 @@ const Myprofile = () => {
       </div>
      </form>
     </div>}
-
-
-
+</div>
+    {updateProfile && <UpdateMyprofileModal updateProfile={updateProfile}/>}
         </div>
     );
 };
