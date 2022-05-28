@@ -6,7 +6,7 @@ import UserRow from "./UserRow";
 const User = () => {
   // here isloading work like default value in useState([])
   const { data: users, isLoading ,refetch} = useQuery("users", () =>
-    fetch("http://localhost:5000/user",{
+    fetch("https://enigmatic-dawn-68660.herokuapp.com/user",{
         method:'GET',
         headers:{
            authorization:`Bearer ${localStorage.getItem('accessToken')}`

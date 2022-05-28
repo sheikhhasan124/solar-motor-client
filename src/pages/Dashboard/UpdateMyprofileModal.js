@@ -13,7 +13,7 @@ const [user] = useAuthState(auth)
    
    
       
-    //   fetch(`http://localhost:5000/userinf/${email}`,{
+    //   fetch(`https://enigmatic-dawn-68660.herokuapp.com/userinf/${email}`,{
     //         method:'PATCH',
     //         headers:{
     //           'content-type': 'application/json',

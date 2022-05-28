@@ -4,7 +4,7 @@ import Loading from "../Shared/Loading";
 
 const Review = () => {
   const { data: reviews, isLoading } = useQuery("reviews", () =>
-    fetch("http://localhost:5000/review").then((res) => res.json())
+    fetch("https://enigmatic-dawn-68660.herokuapp.com/review").then((res) => res.json())
   );
 
   if (isLoading) {
@@ -12,7 +12,7 @@ const Review = () => {
   }
   return (
     <div className="my-20">
-      <h2 className="text-center font-bold text-2xl"> CUSTOMER REVIEWS {reviews.length}</h2>
+      <h2 className="text-center font-bold text-2xl"><span className="text-amber-500">CUSTOMER</span>  REVIEWS </h2>
       <div className="grid lg:grid-cols-3 gap-5">
         {reviews.map((rev) =>  {
           const {userName, review, img, rating, address } = rev;

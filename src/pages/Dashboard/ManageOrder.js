@@ -6,7 +6,7 @@ const ManageOrder = () => {
     const [manageOrders, setMangeOrder]=useState([])
     const [deleteOrder, setDeleteOrder]=useState(null)
     useEffect(()=>{
-      fetch(`http://localhost:5000/myorder`)
+      fetch(`https://enigmatic-dawn-68660.herokuapp.com/myorder`)
       .then(res=>res.json())
       .then(data=>setMangeOrder(data))
     },[manageOrders])

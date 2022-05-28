@@ -42,7 +42,7 @@ const imageStorage_Key = '7b9935e9f253a9586f1b45588dd38ebf'
          img :img
        }
        // send to your data base the doctor info
-       fetch('http://localhost:5000/product',{
+       fetch('https://enigmatic-dawn-68660.herokuapp.com/product',{
          method:'POST',
          headers:{
            'content-type': 'application/json',

@@ -10,7 +10,7 @@ const Myprofile = () => {
     const [updateProfile,setUpdateProfile]=useState(null)
    const email = user?.email
     useEffect(()=>{
-         fetch(`http://localhost:5000/userinf/${email}`)
+         fetch(`https://enigmatic-dawn-68660.herokuapp.com/userinf/${email}`)
          .then(res=>res.json())
          .then(data=>setMyinf(data))
     },[])
@@ -28,7 +28,7 @@ const Myprofile = () => {
              link : event.target.link.value,
               email:email
         }
-        fetch(`http://localhost:5000/userinf`,{
+        fetch(`https://enigmatic-dawn-68660.herokuapp.com/userinf`,{
             method : 'POST',
             headers:{
                 'content-type' : 'application/json'

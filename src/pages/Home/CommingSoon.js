@@ -35,7 +35,7 @@ const CommingSoon = () => {
     
         return (
          <div className='my-4'>
-               <h2 className='font-bold text-3xl text-center py-5'>COMING SOON</h2>
+               <h2 className='font-bold text-3xl text-center py-5'>COMING <span className="text-amber-500">SOON</span></h2>
                 <div style={{background: `url(${comeSoon})`,backgroundSize:'cover'}} class="hero min-h-screen" >
             <div class="hero-overlay "></div>
             <div class="hero-content text-center text-neutral-content">

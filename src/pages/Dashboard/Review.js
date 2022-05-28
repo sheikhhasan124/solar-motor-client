@@ -17,7 +17,7 @@ const Review = () => {
           review:event.target.textarea.value,
           address:event.target.address.value
         }
-        fetch('http://localhost:5000/review',{
+        fetch('https://enigmatic-dawn-68660.herokuapp.com/review',{
           method: 'POST',
           headers: {
             'content-type': 'application/json'

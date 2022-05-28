@@ -10,7 +10,7 @@ const ManageOrderRow = ({manageOrder,index,setDeleteOrder}) => {
     const payment = {
         status:'shifted'
       }
-      fetch(`http://localhost:5000/myordershift/${_id}`,{
+      fetch(`https://enigmatic-dawn-68660.herokuapp.com/myordershift/${_id}`,{
             method:'PATCH',
             headers:{
               'content-type': 'application/json',

@@ -31,7 +31,7 @@ const summaries= [
 const Summary = () => {
     return (
         <div className='my-20 '>
-            <div className='text-center'><h2 className='text-3xl text-amber-500 font-semibold'>MILLIONS BUSINESS TRUST US</h2>
+            <div className='text-center'><h2 className='text-3xl  font-semibold'><span className='text-amber-500'>MILLIONS</span> BUSINESS TRUST US</h2>
             <p className='font-semibold text-gray-500'>TRY TO UNDESTAND USER EXPEXTATIONS</p></div>
             <hr className='mb-20'/>
             <div className='grid grid-cols-4 my'>

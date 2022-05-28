@@ -12,7 +12,7 @@ const Products = () => {
      }
     return (
         <div>
-            <h3 className='text-center font-bold text-2xl '> FEATURED PRODUCTS {products.length}</h3>
+            <h3 className='text-center font-bold text-2xl '><span className="text-amber-500">FEATURED</span> PRODUCTS </h3>
            <div className='grid gap-3 lg:grid-cols-3 md:grid-cols-2'>
            {products.map(product=><Product key={product._id} product={product}/>)}
            </div>

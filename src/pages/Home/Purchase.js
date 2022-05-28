@@ -15,7 +15,7 @@ const Purchase = () => {
   
   useEffect(()=>{
     const func = async()=>{
-      const url = `http://localhost:5000/product/${id}`
+      const url = `https://enigmatic-dawn-68660.herokuapp.com/product/${id}`
       let res = await fetch(url)
       let data = await res.json()
       setItem(data)
@@ -24,7 +24,7 @@ const Purchase = () => {
   },[id])
 
   
-  //  const {data:item,isLoading}=useQuery(['item',id],()=>fetch(`http://localhost:5000/product/${id}`).then(res=>res.json()))
+  //  const {data:item,isLoading}=useQuery(['item',id],()=>fetch(`https://enigmatic-dawn-68660.herokuapp.com/product/${id}`).then(res=>res.json()))
 
 
   

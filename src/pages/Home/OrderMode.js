@@ -25,7 +25,7 @@ const OrderMode = ({order,orderNum,setOrder}) => {
           userName:user.displayName,
           phone: event.target.phone.value
         }
-        fetch('http://localhost:5000/myOrder',{
+        fetch('https://enigmatic-dawn-68660.herokuapp.com/myOrder',{
           method: 'POST',
           headers: {
             'content-type': 'application/json'

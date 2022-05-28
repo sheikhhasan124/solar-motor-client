@@ -6,7 +6,7 @@ const UserRow = ({user,index,refetch}) => {
 
   const makeAdmin=()=>{
     // backend a token patate metho bolte hoi
-    fetch(`http://localhost:5000/user/admin/${email}`,{
+    fetch(`https://enigmatic-dawn-68660.herokuapp.com/user/admin/${email}`,{
       method:'PUT',
       headers:{
         authorization: `Bearer ${localStorage.getItem('accessToken')}`

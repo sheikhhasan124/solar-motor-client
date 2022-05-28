@@ -10,7 +10,7 @@ const stripePromise = loadStripe(`pk_test_51L2BQ1CJu1xjIM5SfbvN8CfqrmqNojggr9Hhf
 
 const Payments = () => {
     const {id} = useParams()
-    const url = `http://localhost:5000/myorder/${id}`
+    const url = `https://enigmatic-dawn-68660.herokuapp.com/myorder/${id}`
     const {data: order,isLoading}=useQuery(['order',id],()=>fetch(url).then(res=>res.json()))
 
 

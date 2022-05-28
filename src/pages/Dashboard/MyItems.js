@@ -15,7 +15,7 @@ const MyItems = () => {
    
     useEffect(()=>{
         if(user){
-            fetch(`http://localhost:5000/myorder?email=${user.email}`,{
+            fetch(`https://enigmatic-dawn-68660.herokuapp.com/myorder?email=${user.email}`,{
               method:'GET',
               headers:{
                 'authorization':`Bearer ${localStorage.getItem('accessToken')}`
