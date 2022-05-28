@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import useProduct from '../../Hook/useProduct';
+import Loading from '../Shared/Loading';
 import Product from './Product';
 
 const Products = () => {
-    const [products, setProducts]=useState([])
+    const {products,isLoading }= useProduct()
 
-    useEffect(()=>{
-       fetch('http://localhost:5000/product')
-       .then(res=>res.json())
-       .then(data=>setProducts(data))  
-    },[])
+
+     if(isLoading){
+         return <Loading/>
+     }
     return (
         <div>
             <h3 className='text-center font-bold text-2xl '> FEATURED PRODUCTS {products.length}</h3>

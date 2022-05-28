@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
+import CommingSoon from './CommingSoon';
 import Products from './Products';
 import Review from './Review';
 import Subbanner from './Subbanner';
@@ -13,6 +14,7 @@ const Home = () => {
             <Products/>
             <Summary/>
             <Review/>
+            <CommingSoon/>
         </div>
     );
 };
