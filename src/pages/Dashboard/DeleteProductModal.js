@@ -29,7 +29,7 @@ const DeleteProductModal = ({deleteProduct,setDeleteProduct, refetch}) => {
     <h3 class="font-bold text-lg">{`are u sure to delete ${productName}`}</h3>
     <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
     <div class="modal-action">
-      <label for="delete-product" class="btn">Yay!</label>
+      <label for="delete-product" class="btn">cansel</label>
       <button onClick={()=>orderDelete()} class="btn btn-outline btn-warning">remove</button>
     </div>
   </div>

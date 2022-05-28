@@ -68,7 +68,7 @@ const OrderMode = ({order,orderNum,setOrder}) => {
      
 
     <div class="modal-action">
-      <label for="my-modal" class="btn">Yay!</label>
+      <label for="my-modal" class="btn">cansel</label>
     </div>
   </div>
 </div>
