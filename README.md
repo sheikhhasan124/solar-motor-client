@@ -1,3 +1,20 @@
+# SOLAR MOTOR
+
+The wevsire link 
+
+### what feature has there
+- home page
+- dashbord
+- user's order in myorder page 
+- order paid by react stripe , order cansel
+- user's profile , can extra inf added and update
+- addmin page
+- a addmin can add product , delete product
+- addmin can user's payment shift
+- email,password authentication,
+- goolgle authentication
+- manage order
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -25,7 +25,11 @@ const MyPortfolio = () => {
           <li>git & github </li>
       
       </ul>
-     
+        
+        <h3 className='text-xl font-bold'>sample website link</h3>
+         <p>https://furniture-warehouse-35670.web.app/</p>
+         <p>https://bien-health-4c6ec.web.app/</p>
+         <p>https://t-shirt-collection-c88f81.netlify.app/</p>
     
     </div>
   </div>

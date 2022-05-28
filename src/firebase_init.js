@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDWAQ6y2l23skiPbCihBwDHsYcWJRe1_Rw",
-  authDomain: "sustainable-energy-tools.firebaseapp.com",
-  projectId: "sustainable-energy-tools",
-  storageBucket: "sustainable-energy-tools.appspot.com",
-  messagingSenderId: "93524792639",
-  appId: "1:93524792639:web:d557a3a035f6497c76af8a"
+  apiKey:process.env.REACT_APP_API_KEY,
+  authDomain:process.env.REACT_APP_AUTH_DOMAIN,
+  projectId:process.env.REACT_APP_PROJECT_ID,
+  storageBucket:process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId:process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId:process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
