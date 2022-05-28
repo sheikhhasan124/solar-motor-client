@@ -16,7 +16,6 @@ const CheckoutForm = ({order}) => {
             method:'POST',
             headers:{
                 'content-type' : 'application/json',
-              
             },
             body: JSON.stringify({totalPrice})
         })
@@ -79,7 +78,8 @@ const CheckoutForm = ({order}) => {
            // and payment store on database
            const payment = {
              appoinment : _id,
-             transectionId: paymentIntent.id
+             transectionId: paymentIntent.id,
+             status:'pending'
            }
           fetch(`http://localhost:5000/myorder/${_id}`,{
             method:'PATCH',

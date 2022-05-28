@@ -52,7 +52,7 @@ const MyItems = () => {
       </tr>
     </thead>
     <tbody>
-    {orderItems.map((a,index)=><MyItemsRow index={index} key={a._id}  a={a} setDeleteOrder={setDeleteOrder}> </MyItemsRow>)}
+    {orderItems.map((orderItem,index)=><MyItemsRow index={index} key={orderItem._id}  orderItem={orderItem} setDeleteOrder={setDeleteOrder}> </MyItemsRow>)}
     </tbody>
   </table>
 </div>
