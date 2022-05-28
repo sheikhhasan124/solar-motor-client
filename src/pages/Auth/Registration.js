@@ -19,15 +19,20 @@ const Registration = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
-      const [updateProfile] = useUpdateProfile(auth);
+      const [updateProfile, updating] = useUpdateProfile(auth);
       // const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+      const onSubmit = async(data) => {
+       await createUserWithEmailAndPassword(data.email, data.password)
+       await updateProfile({ displayName:data.name });
+        // console.log('update done')
+      };
    
        const [token]=useToken(user || gUser)
 
        const navigate = useNavigate()
 
 
-      if(loading||gLoading){
+      if(loading||gLoading || updating){
           return <Loading/>
       }
 
@@ -43,11 +48,6 @@ const Registration = () => {
     //     // console.log(user)
     //     navigate('/')
     // }
-    const onSubmit = async(data) => {
-     await createUserWithEmailAndPassword(data.email, data.password)
-     await updateProfile({ displayName:data.name });
-      // console.log('update done')
-    };
     return (
         <div>
              <div className='flex h-screen justify-center items-center'>
