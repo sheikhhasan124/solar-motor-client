@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ManageOrderRow = ({manageOrder,index}) => {
+const ManageOrderRow = ({manageOrder,index,setDeleteOrder}) => {
     // console.log(manageOrder)
     const {_id}=manageOrder;
 
@@ -14,7 +14,7 @@ const ManageOrderRow = ({manageOrder,index}) => {
             method:'PATCH',
             headers:{
               'content-type': 'application/json',
-              'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+             
             },
             body:JSON.stringify(payment)
           }).then(res=>res.json())
@@ -33,7 +33,7 @@ const ManageOrderRow = ({manageOrder,index}) => {
         <td>{manageOrder.productName}</td>
         
         
-        <td>{(manageOrder.totalPrice && !manageOrder.paid )&& <label class="btn btn-sm"  for="delete-order" >cancel</label>}
+        <td>{(manageOrder.totalPrice && !manageOrder.paid )&& <label onClick={()=>setDeleteOrder(manageOrder)} class="btn btn-sm"  for="delete-order" >cancel</label>}
         {(manageOrder.totalPrice && manageOrder.paid )&& <>            
             
             {manageOrder.status=='shifted'? <button disabled className='text-success btn btn-sm bg-danger'>shifted</button>  : <p><span onClick={handleShipt} className='text-success btn btn-sm bg-danger'>Shipt Now</span>  </p>}

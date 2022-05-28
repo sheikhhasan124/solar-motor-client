@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import DeleteOrderModal from './DeleteOrderModal';
 import ManageOrderRow from './ManageOrderRow';
 
 const ManageOrder = () => {
     const [manageOrders, setMangeOrder]=useState([])
+    const [deleteOrder, setDeleteOrder]=useState(null)
     useEffect(()=>{
       fetch(`http://localhost:5000/myorder`)
       .then(res=>res.json())
@@ -27,10 +29,11 @@ const ManageOrder = () => {
       </tr>
     </thead>
     <tbody>
-    {manageOrders.map((manageOrder,index)=><ManageOrderRow index={index} key={manageOrder._id}  manageOrder={manageOrder}> </ManageOrderRow>)}
+    {manageOrders.map((manageOrder,index)=><ManageOrderRow index={index} key={manageOrder._id}  manageOrder={manageOrder} setDeleteOrder={setDeleteOrder}> </ManageOrderRow>)}
     </tbody>
   </table>
 </div>
+{deleteOrder && <DeleteOrderModal deleteOrder={deleteOrder} setDeleteOrder={setDeleteOrder}/>}
         </div>
     );
 };

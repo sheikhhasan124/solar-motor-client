@@ -48,6 +48,8 @@ const MyItems = () => {
         <th>Product</th>
         <th>price</th>
         <th>order</th>
+        <th>condition</th>
+        <th>payment</th>
         
       </tr>
     </thead>
