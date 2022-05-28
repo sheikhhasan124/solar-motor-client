@@ -2,18 +2,31 @@ import React, { useState } from 'react';
 
 const PurchaseItem = ({item,setOrder,setOrderNum,orderNum}) => {
      
-    
+    const [error,setError]=useState('')    
+
+  
     let minnum = item.minqnt
     let available = item.avaqnt
-   let error;
+   
     let inc =()=>{
-      if(orderNum<available)
-      setOrderNum((prev)=>prev+1)
+      if(orderNum<available){
+        setOrderNum((prev)=>prev+1)
+        setError('')
+      }
+      else{
+        setError('error')
+
+      }
      }
      let dec =()=>{
-      if(orderNum>minnum)
+      if(orderNum>minnum){
+        setOrderNum((prev)=> prev - 1)
+        setError('')
 
-       setOrderNum((prev)=> prev - 1)
+      }else{
+        setError('there are min limited')
+      }
+
      }
    
 
@@ -41,6 +54,8 @@ const PurchaseItem = ({item,setOrder,setOrderNum,orderNum}) => {
           <p className="text-gray-500 font-semibold">Total Price : {item.price * orderNum}</p>
             </div>
             <div className=''>
+
+                {error && <p className='text-red-700 font-bold text-xl '>{error}</p>}
               <span className='text-gray-600 font-bold text-2xl'>Order Qut : </span>
               <button onClick={inc} className='text-4xl font-bold'>+</button>
               <span className='mx-5 text-2xl font-bold'>{parseFloat(orderNum)}</span>
