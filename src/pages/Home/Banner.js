@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../asset/banner.jpeg'
+import banner from '../../asset/energy-banner.jpg'
 
 const Banner = () => {
     return (
