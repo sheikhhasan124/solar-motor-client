@@ -7,8 +7,8 @@ const Banner = () => {
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-md">
-            <h1 class="mb-5  lg:text-6xl text-5xl font-bold">RENEWABLE ENERGY</h1>
-            <p class="mb-5 text-xl font-bold">Make Natural Environment. Get Solar Energy. Remove co2. Make better future for our generation</p>
+            <h1 class="mb-5  lg:text-6xl text-5xl font-bold">RE<span className='text-primary'>NE</span>WABLE EN<span className='text-primary'>ER</span>GY</h1>
+            <p class="mb-5 text-xl font-bold">Make Natural Environment.<span className='text-primary'>Get Solar Energy.</span> Remove co2. Make better future for our generation</p>
             <button class="btn btn-gradient">Get Started</button>
           </div>
         </div>

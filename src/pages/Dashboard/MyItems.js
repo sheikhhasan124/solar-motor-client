@@ -44,12 +44,12 @@ const MyItems = () => {
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
-        <th>Product</th>
-        <th>price</th>
-        <th>order</th>
-        <th>condition</th>
-        <th>payment</th>
+        <th className='text-gray-500'>Name</th>
+        <th className='text-gray-500'>Product</th>
+        <th className='text-gray-500'>price</th>
+        <th className='text-gray-500'>order</th>
+        <th className='text-gray-500'>condition</th>
+        <th className='text-gray-500'>payment</th>
         
       </tr>
     </thead>

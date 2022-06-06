@@ -14,17 +14,17 @@ const ManageOrder = () => {
 
     return (
         <div>
-            <h2>manage order {manageOrders.length}</h2>
+            <h2 className='text-2xl font-bold text-center py-2'>Manage Order</h2>
             <div class="overflow-x-auto">
   <table class="table w-full">
    
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
-        <th>Product</th>
-        <th>payment</th>
-        <th>condition</th>
+        <th className='text-gray-500'>Youser Name</th>
+        <th className='text-gray-500'>Product</th>
+        <th className='text-gray-500'>payment</th>
+        
         
       </tr>
     </thead>

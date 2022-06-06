@@ -71,8 +71,9 @@ const imageStorage_Key = '7b9935e9f253a9586f1b45588dd38ebf'
 
 
   return (
-    <div>
-      <h2 className="text-4xl text-purple-600">Add Product</h2>
+    <div className="flex justify-center">
+        <div>
+      <h2 className="text-2xl font-semibold text-center py-4">Add Product</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full max-w-xs">
          
@@ -226,6 +227,7 @@ const imageStorage_Key = '7b9935e9f253a9586f1b45588dd38ebf'
           type="submit"
         />
       </form>
+    </div>
     </div>
   );
 };

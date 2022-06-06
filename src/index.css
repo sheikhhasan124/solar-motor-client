@@ -5,6 +5,9 @@
 .btn-gradient{
   @apply btn text-white font-bold bg-gradient-to-r from-primary to-secondary btn-primary
 }
+.footer-social-btn{
+  @apply text-3xl bg-slate-400 hover:scale-125  ease-in duration-300 mr-2
+}
 
 body {
   margin: 0;

@@ -18,16 +18,16 @@ const User = () => {
   }
   return (
     <div>
-      <h2 className="text-3xl text-purple-500">All users{users.length}</h2>
+      <h2 className="text-2xl font-bold text-center py-4">All Users</h2>
 
       <div class="overflow-x-auto">
         <table class="table w-full">
           <thead>
             <tr>
               <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th className='text-gray-500'>All Youser</th>
+              <th className='text-gray-500'>Make Admin</th>
+              <th className='text-gray-500'>Remove</th>
             </tr>
           </thead>
           <tbody>

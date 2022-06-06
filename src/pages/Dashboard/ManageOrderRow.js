@@ -33,17 +33,17 @@ const ManageOrderRow = ({manageOrder,index,setDeleteOrder}) => {
         <td>{manageOrder.productName}</td>
         
         
-        <td>{(manageOrder.totalPrice && !manageOrder.paid )&& <label onClick={()=>setDeleteOrder(manageOrder)} class="btn btn-sm"  for="delete-order" >cancel</label>}
+        <td>{(manageOrder.totalPrice && !manageOrder.paid )&& <label onClick={()=>setDeleteOrder(manageOrder)} class="btn btn-sm bg-[hsl(9,98%,52%)] border-0 text-white"  for="delete-order" >cancel</label>}
         {(manageOrder.totalPrice && manageOrder.paid )&& <>            
             
-            {manageOrder.status=='shifted'? <button disabled className='text-success btn btn-sm bg-danger'>shifted</button>  : <p><span onClick={handleShipt} className='text-success btn btn-sm bg-danger'>Shipt Now</span>  </p>}
+            {manageOrder.status=='shifted'? <button  className='btn btn-sm bg-[#00d300] border-0 text-white'>shifted</button>  : <p><span onClick={handleShipt} className=' btn btn-sm bg-fuchsia-400 border-0 text-white'>pending</span>  </p>}
               
             </>}
         </td>
-        <td>
+        {/* <td>
             {manageOrder.status && <p className='bg-primary rounded-md'>{manageOrder.status}</p>}
          
-          </td>
+          </td> */}
       </tr>
       
     );

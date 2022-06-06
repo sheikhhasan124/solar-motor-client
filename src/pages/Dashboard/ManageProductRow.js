@@ -7,7 +7,7 @@ const ManageProductRow = ({product,setDeleteProduct}) => {
             <img className='w-[100px] rounded-lg ' src={img} alt="" />
             <h2>{name}</h2>
         
-        <label className='btn btn-sm bg-primary text-black border-0' onClick={()=>setDeleteProduct(product)}  for="delete-product" >cancel</label>
+        <label className='btn btn-sm bg-[hsl(9,98%,52%)] border-0 text-white' onClick={()=>setDeleteProduct(product)}  for="delete-product" >cancel</label>
         </div>
     );
 };

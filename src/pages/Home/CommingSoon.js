@@ -1,9 +1,9 @@
 import React from 'react';
-import comeSoon from '../../asset/solar-economics-900x512.jpg'
-import qupiditant from '../../asset/qupiditant.webp'
-import tayar from '../../asset/tayar.webp'
-import strice from '../../asset/stripe-stick.webp'
-
+import comeSoon from '../../asset/roof-solar.jpg'
+import solar1 from '../../asset/solar-1.jpg'
+import solar2 from '../../asset/solar-2.jpg'
+import solar3 from '../../asset/solar-3.jpg'
+import solar4 from '../../asset/solar-4.jpg'
 const CommingSoon = () => {
        
             const comming = [
@@ -11,25 +11,25 @@ const CommingSoon = () => {
                     id: 1,
                     name:'solar qupiditant',
                     price:20,
-                    img: qupiditant
+                    img: solar1
                 },
                 {
                     id: 2,
                     name:'whell',
                     price:20,
-                    img: tayar
+                    img: solar2
                 },
                 {
                     id: 3,
                     name:'solar stripe stick',
                     price:20,
-                    img:strice
+                    img: solar3
                 },
                 {
                     id: 4,
                     name:'whell',
                     price:20,
-                    img: tayar
+                    img: solar4
                 },
             ]
     
@@ -42,10 +42,9 @@ const CommingSoon = () => {
               <div>
                  
               <div class=" grid grid-cols-2 lg:grid-cols-4 ">
-                 {comming.map(some=><div className='bg-white p-3'>
-                     <img src={some.img} alt="" />
-                     <h2 className='text-primary font-bold'>{some.name}</h2>
-                     <p className='text-red-400 font-semibold'>price $ {some.price}</p>
+                 {comming.map(some=><div className='bg-[white] opacity-75 p-3'>
+                     <img className='hover:scale-125  ease-in duration-300 h-[200px]' src={some.img} alt="" />
+                    
                  </div>)}
               </div>
               </div>

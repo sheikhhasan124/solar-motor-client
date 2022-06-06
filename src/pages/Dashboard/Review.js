@@ -45,10 +45,10 @@ const Review = () => {
             
              <form onSubmit={handleReview}>
                  <textarea className='border-2 p-2' name="textarea" placeholder='Review Desc' cols="50" rows="2"></textarea><br />
-                 <input className='border-2 border-slate-500 w-[390px]' type="text" name="rating" placeholder='Rating' id="" /><br />
-                 <input type="text" name='address' placeholder='address'className='border-2 border-slate-500 w-[390px]' />
+                 <input className='border-2 p-2 w-[390px]' type="text" name="Rating" placeholder='Rating' id="" /><br />
+                 <input type="text" name='address' placeholder='Address'className='border-2 p-2 w-[390px]' />
                  <br />
-                 <input  className='btn block btn-primary w-40  mt-3' type="submit" value="submit" />
+                 <input  className='btn block btn-gradient w-40  mt-3' type="submit" value="submit" />
              </form>
             </div>
         </div>

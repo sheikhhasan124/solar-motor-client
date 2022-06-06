@@ -13,9 +13,9 @@ const ManageProduct = () => {
         return <Loading/>
     }
     return (
-       <div>
+       <div className='flex justify-center'>
             <div className='w-[350px] md:w-[500px]'>
-            <h2>manage product {products.length}</h2>
+            <h2 className='text-2xl font-bold text-center py-2'>Manage Product</h2>
              {products.map(product=><ManageProductRow setDeleteProduct={setDeleteProduct} key={product._id} product={product}></ManageProductRow>)}
         </div>
         {deleteProduct && <DeleteProductModal deleteProduct={deleteProduct} refetch={refetch} setDeleteProduct={setDeleteProduct}/>}
