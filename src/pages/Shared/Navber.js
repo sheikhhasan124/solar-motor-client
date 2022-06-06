@@ -20,7 +20,10 @@ const Navber = () => {
         <li><Link to="/portfolio">My portFolio</Link></li>
 
         {user&& <li><Link to="/dashboard">Dashbord</Link></li>}
-        {user? <button onClick={signout} className="btn btn-ghost">Sign Out</button>:<li><Link to="/login">login</Link></li>}
+
+        <div className="relative btn lg:left-48 btn-gradient">
+        {user? <button onClick={signout} className="">Sign Out</button>:<li><Link to="/login">login</Link></li>}
+        </div>
   </>
 
   return (

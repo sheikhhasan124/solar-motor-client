@@ -49,7 +49,7 @@ const Summary = () => {
                     <p className='text-sm text-gray-500'>Don't hasitate to contack us</p>
                 </div>
                 <div className='my-4 w-50 md:ml-12'>
-                    <button className='btn bg-primary btn-outline mr-5 border-0'>Request Order</button>
+                    <button className='btn-gradient text-white  mr-5 border-0'>Request Order</button>
                     <button className='btn '>Contact Us</button>
                 </div>
             </div>

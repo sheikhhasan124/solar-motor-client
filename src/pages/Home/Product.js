@@ -31,7 +31,7 @@ const Product = ({ product }) => {
           <hr className="text-gray-500 w-40 h-3" />
           <div className=" grid grid-cols-2 gap-20 items-center">
             <div>
-              <button className="btn btn-sm block flex-1">
+              <button className="btn btn-sm block btn-gradient flex-1">
                 <Link to={`/product/${_id}`}>Purchase</Link>
               </button>
             </div>

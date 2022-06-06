@@ -36,7 +36,7 @@ const MyItems = () => {
      },[user,orderItems])
     return (
         <div>
-            <h1>my items{orderItems.length}</h1>
+            <h1 className='text-xl font-semibold my-6'>My Order</h1>
 
             <div class="overflow-x-auto">
   <table class="table w-full">

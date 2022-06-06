@@ -48,7 +48,7 @@ const Footer = () => {
                 <p>Recieve our latest news straight to your inbox</p>
               
                 <input type="text" placeholder='Email adderess' />
-                <button>SUBSCRIBE</button>
+                <button className='btn-gradient'>SUBSCRIBE</button>
                 
             </div>
             </div>
