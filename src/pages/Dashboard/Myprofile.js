@@ -49,8 +49,8 @@ const Myprofile = () => {
 
 
     return (
-        <div className=''>
-            <h1>my profile</h1>
+        <div className=' mt-10'>
+            <h1 className='text-2xl font-bold text-center underline'>My Profile</h1>
 
 <div class="card lg:max-w-lg bg-base-100 shadow-xl">
   <div class="card-body">

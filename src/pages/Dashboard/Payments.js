@@ -18,14 +18,15 @@ const Payments = () => {
         return <Loading />
     }
     return (
-        <div>
-            <h2>please pay your {id}</h2>
+       <div className='mt-10 flex justify-center'>
+         <div>
+            <h2 className='text-center font-bold text-2xl underline'>Pay Please</h2>
             <div class="card w-96 bg-base-100 shadow-xl">
-        <div class="card-body">
+        <div class="card-body mx-auto">
             <p className="text-2xl font-bold text-green-500">hello {order.userName}</p>
           <h2 class="card-title">pay for {order.productName} </h2>
           
-         <p>please pay ${order.totalPrice}</p>
+         <p><span className='text-xl font-semibold'>Amount</span> : <span className='text-rose-500 font-semibold'>${order.totalPrice}</span></p>
         </div>
         
       </div>
@@ -37,6 +38,7 @@ const Payments = () => {
         </div>
       </div>
         </div>
+       </div>
     );
 };
 

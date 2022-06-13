@@ -3,6 +3,10 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {Link} from 'react-router-dom'
 import auth from "../../firebase_init";
+import logo from '../../asset/Solar Motor.png'
+import { HiMenu } from "react-icons/hi";
+import { HiChevronDown } from "react-icons/hi";
+
 
 const Navber = () => {
    const [user]=useAuthState(auth)
@@ -15,7 +19,7 @@ const Navber = () => {
     <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
       
-        <li><Link to="/reviews">Reviews</Link></li>
+        <li><Link to="/review">Reviews</Link></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/portfolio">My portFolio</Link></li>
 
@@ -31,20 +35,11 @@ const Navber = () => {
       <div class="navbar-start">
         <div class="dropdown">
           <label tabIndex="0" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+            <div className="text-3xl mr-2">
+            <HiMenu/>
+            </div>
+            
+            
           </label>
           <ul
             tabIndex="0"
@@ -53,7 +48,7 @@ const Navber = () => {
            {menuItems}
           </ul>
         </div>
-        <Link to="/" class="btn btn-ghost normal-case text-xl">Solar Motor</Link>
+        <Link to="/" class=""><img className="h-16" src={logo} alt="logo" /></Link>
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
@@ -62,7 +57,9 @@ const Navber = () => {
       </div>
       <div className="navbar-end">
      <label for="dashbord-sidebar" tabIndex="1"className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg"className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+     <div className="text-3xl mr-2">
+            <HiChevronDown/>
+            </div>
       </label>
   </div>
       

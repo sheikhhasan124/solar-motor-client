@@ -6,7 +6,7 @@ const CheckoutForm = ({order}) => {
       const elements = useElements()
       const [err,setErr]=useState('')
       const [success,setSuccess] = useState('')
-      const [processing, setProcessing] = useState(false)
+      const [ setProcessing] = useState(false)
       const [transectionId, setTransectionId]=useState('')
       const [clientSecret, setClientSecret]=useState('')  
     const {_id, totalPrice, email, userName} = order;
@@ -115,8 +115,8 @@ const CheckoutForm = ({order}) => {
             },
           }}
         />
-        <button type="submit" disabled={!stripe || !clientSecret}>
-          Pay
+        <button className='btn btn-sm mt-3 mx-auto block bg-[#2d2df1] border-0 text-white' type="submit" disabled={!stripe || !clientSecret}>
+         complete Payment
         </button>
       </form>
       {

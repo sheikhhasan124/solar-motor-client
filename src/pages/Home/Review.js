@@ -11,7 +11,7 @@ const Review = () => {
     return <Loading />;
   }
   return (
-    <div className="my-20">
+    <div id="review" className="my-20">
       <h2 className="text-center font-bold text-2xl"><span className="text-amber-500">CUSTOMER</span>  REVIEWS </h2>
       <div className="grid lg:grid-cols-3 gap-5">
         {reviews.map((rev) =>  {
