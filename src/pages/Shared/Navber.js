@@ -43,7 +43,7 @@ const Navber = () => {
           </label>
           <ul
             tabIndex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold"
           >
            {menuItems}
           </ul>
@@ -51,7 +51,7 @@ const Navber = () => {
         <Link to="/" class=""><img className="h-16" src={logo} alt="logo" /></Link>
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal p-0">
+        <ul class="menu menu-horizontal p-0 font-bold text-[gray]">
           {menuItems}
         </ul>
       </div>

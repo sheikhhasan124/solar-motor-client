@@ -9,7 +9,7 @@ const Banner = () => {
           <div class="max-w-md">
             <h1 class="mb-5  lg:text-6xl text-5xl font-bold">RE<span className='text-primary'>NE</span>WABLE EN<span className='text-primary'>ER</span>GY</h1>
             <p class="mb-5 text-xl font-bold">Make Natural Environment.<span className='text-primary'>Get Solar Energy.</span> Remove co2. Make better future for our generation</p>
-            <button class="btn btn-gradient">Get Started</button>
+            <button class="btn btn-gradient">Explore now</button>
           </div>
         </div>
       </div>
