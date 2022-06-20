@@ -12,9 +12,9 @@ const DeleteOrderModal = ({deleteOrder,setDeleteOrder}) => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            // console.log(data)
             if(data.deletedCount){
-                toast.success('doctor deleted')
+                toast.success('item deleted')
                 // refetch()
                 setDeleteOrder(null)
             }
